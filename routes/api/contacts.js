@@ -1,6 +1,7 @@
 import express from "express";
 import contactsController from "../../controller/contactsController.js";
 import Joi from "joi";
+import auth from "../../middlewares/auth.js";
 
 const contactSchema = Joi.object({
   name: Joi.string().min(3).required(),
